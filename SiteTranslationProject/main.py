@@ -43,7 +43,7 @@ def create_program_mainloop(transparent_icon_location: str) -> Tk:
 def custom_chrome_options(headless=True) -> Options:
     """Creates custom Chrome options object.\n
     By default chrome driver is in the headless mode
-    so that it uses a lot less resources but this can be turned off
+    so that it uses far fewer resources but this can be turned off
     via the 'headless' parameter."""
 
     driver_installer.install()
