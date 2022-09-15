@@ -293,8 +293,6 @@ def scrape_links(driver: WebDriver, number_links: int, link_list: list[str],
                         StaleElementReferenceException):
                     continue
 
-            # continue
-
     return scraped_text, discarded_links
 
 
