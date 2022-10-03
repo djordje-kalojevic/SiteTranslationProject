@@ -166,7 +166,7 @@ def link_preprocessing(link_list: list[str]) -> tuple[list[str], list[str]]:
     return processed_link_list, discarded_links
 
 
-def check_xpath(driver: WebDriver, link: str) -> bool:
+def check_xpath(driver: WebDriver, link: str):
     """Checks whether the inputted Xpath is the correct one.
     Requires users confirmation."""
     check_performed = False
