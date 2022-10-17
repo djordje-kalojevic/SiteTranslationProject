@@ -400,14 +400,15 @@ def site_translation():
 
     driver = Chrome(options=custom_chrome_options())
 
-    if check_xpath(driver, first_link):
-        # scrapes the rest of the links
-        scraped_text, discarded_links = scrape_links(driver, number_links,
-                                                     processed_link_list,
-                                                     "/html/body/div[5]")
+    # checks if the xpath is valid
+    xpath = check_xpath(driver, first_link)
 
-        process_and_save_scraped_text(scraped_text, discarded_links,
-                                      current_dir)
+    # scrapes the rest of the links using the xpath
+    scraped_text, discarded_links = scrape_links(driver, number_links,
+                                                processed_link_list,
+                                                xpath)
+
+    process_and_save_scraped_text(scraped_text, discarded_links, current_dir)
 
     driver.quit()
 
